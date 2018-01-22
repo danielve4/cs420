@@ -1,6 +1,6 @@
 package assignment1;
 
-class DanielPersonType {
+class DanielPersonType implements Comparable<DanielPersonType> {
 
   private String firstName;
   private String lastName;
@@ -35,6 +35,7 @@ class DanielPersonType {
     return new DanielPersonType(this.firstName, this.lastName);
   }
 
+  @Override
   public int compareTo(DanielPersonType other) {
     String thisFullName = this.lastName+this.firstName;
     String otherFullName = other.getLastName()+other.getFirstName();
@@ -42,6 +43,6 @@ class DanielPersonType {
   }
 
   public String toString() {
-    return "First Name: " + firstName + " - Last Name:" + lastName;
+    return "First Name: " + firstName + " - Last Name: " + lastName;
   }
 }
