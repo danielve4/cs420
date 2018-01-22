@@ -1,5 +1,6 @@
 package assignment1;
 import java.util.Scanner;
+import java.util.Arrays;
 
 class CS420TeamListADT {
   
@@ -71,8 +72,12 @@ class CS420TeamListADT {
         numberFound++;
       }
     }
-    if(numberFound==0)
+    if(numberFound == 0)
     System.out.println("No person found!");
+  }
+
+  public void sort() {
+    Arrays.sort(team, 0, teamSize);
   }
 
   public String toString() {
