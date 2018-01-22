@@ -29,6 +29,7 @@ class VegaStoreApp {
       "2 - List Team Members\n" + 
       "3 - Delete Last Team Member\n" +
       "4 - Search by keyword\n" +
+      "5 - Sort by last name\n" +
       "0 - Exit\n" + 
       "> ";
     System.out.print("\n\n" + instructions);
@@ -50,6 +51,9 @@ class VegaStoreApp {
       break;
       case 4:
         teamList.searchByKeyword(scanner);
+      break;
+      case 5:
+        teamList.sort();
       break;
       default:
         System.out.println("Please enter a valid option");
