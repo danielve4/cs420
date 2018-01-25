@@ -41,7 +41,7 @@ class VegaStoreApp {
         System.out.println("Goodbye!"); 
       break;
       case 1:
-        teamList.addPersonFromInput(scanner);
+        addPersonFromInput(teamList, scanner);
       break;
       case 2: 
         System.out.println("\n\n" + teamList.toString());
@@ -50,7 +50,7 @@ class VegaStoreApp {
         teamList.deleteLastPerson();
       break;
       case 4:
-        teamList.searchByKeyword(scanner);
+        searchByKeyword(teamList, scanner);
       break;
       case 5:
         teamList.sort();
@@ -59,5 +59,35 @@ class VegaStoreApp {
         System.out.println("Please enter a valid option");
       break;
     }
+  }
+
+  public static void addPersonFromInput(CS420TeamListADT teamList, Scanner scanner) {
+    scanner.nextLine();
+    String fName;
+    String lName;
+    System.out.print("Enter person's first name\n> ");
+    fName = scanner.next();
+    System.out.print("Enter person's last name\n> ");
+    lName = scanner.next();
+    teamList.addPerson(new DanielPersonType(fName.trim(), lName.trim()));
+    System.out.print("\nPerson Added!");
+  }
+
+  public static void searchByKeyword(CS420TeamListADT teamList, Scanner scanner) {
+    scanner.nextLine();
+    System.out.print("Enter keyword to search by\n> ");
+    String key = scanner.nextLine();
+    System.out.print("\n\n");
+    int numberFound=0;
+    DanielPersonType[] team = teamList.getTeam();
+    for(int i=0; i < team.length; i++) {
+      if(team[i].getFirstName().toLowerCase().contains(key.toLowerCase())
+      || team[i].getLastName().toLowerCase().contains(key.toLowerCase())) {
+        System.out.println(team[i].toString());
+        numberFound++;
+      }
+    }
+    if(numberFound == 0)
+      System.out.println("No person found!");
   }
 }
