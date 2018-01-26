@@ -1,4 +1,4 @@
-package assignment1.app;
+package assignment1;
 
 class DanielPersonType implements Comparable<DanielPersonType> {
 
