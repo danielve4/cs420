@@ -8,8 +8,8 @@ default:
 	echo Please chose an assignment
 
 1:
-	javac $(wildcard assignment1/app/*.java)
-	java assignment1.app.VegaStoreApp
+	javac $(wildcard assignment1/*.java)
+	java assignment1.VegaStoreApp
 
 clean:
 	rm $(wildcard */*.class)
