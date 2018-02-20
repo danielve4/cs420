@@ -1,9 +1,9 @@
 .DS_Store
 *.class
 /.metadata/
-/bin
+bin/
 .vscode
 /.gitignore
 .classpath
 .project
-.settings
+.settings/
