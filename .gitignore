@@ -2,3 +2,8 @@
 *.class
 /.metadata/
 /bin
+.vscode
+/.gitignore
+.classpath
+.project
+.settings
