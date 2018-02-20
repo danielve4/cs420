@@ -1,5 +1,4 @@
 package assignment2;
-import java.util.Scanner;
 import java.util.Arrays;
 
 class CS420TeamListADT {
@@ -43,37 +42,8 @@ class CS420TeamListADT {
     this.teamSize++;
   }
 
-  public void addPersonFromInput(Scanner scanner) {
-    scanner.nextLine();
-    String fName;
-    String lName;
-    System.out.print("Enter person's first name\n> ");
-    fName = scanner.next();
-    System.out.print("Enter person's last name\n> ");
-    lName = scanner.next();
-    addPerson(new DanielPersonType(fName.trim(), lName.trim()));
-    System.out.print("\nPerson Added!");
-  }
-
   public void deleteLastPerson() {
     this.teamSize -= 1;
-  }
-
-  public void searchByKeyword(Scanner scanner) {
-    scanner.nextLine();
-    System.out.print("Enter keyword to search by\n> ");
-    String key = scanner.nextLine();
-    System.out.print("\n\n");
-    int numberFound=0;
-    for(int i=0; i < this.teamSize; i++) {
-      if(this.team[i].getFirstName().toLowerCase().contains(key.toLowerCase())
-      || this.team[i].getLastName().toLowerCase().contains(key.toLowerCase())) {
-        System.out.println(this.team[i].toString());
-        numberFound++;
-      }
-    }
-    if(numberFound == 0)
-    System.out.println("No person found!");
   }
 
   public void sort() {
