@@ -1,4 +1,5 @@
 package assignment2;
+import java.util.Scanner;
 import java.util.Arrays;
 
 class CS420TeamListADT {
