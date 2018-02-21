@@ -1,8 +1,6 @@
 .DS_Store
 *.class
-<<<<<<< HEAD
 *.zip
-=======
 /.metadata/
 bin/
 .vscode
@@ -10,4 +8,3 @@ bin/
 .classpath
 .project
 .settings/
->>>>>>> d65a862e330c2ff10dc093da9a85a5b036b2ccdf
