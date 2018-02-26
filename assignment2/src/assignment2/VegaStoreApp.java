@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 class VegaStoreApp {
   public static void main(String[] args) {
-    CS420TeamListADT teamList = new CS420TeamListADT(5); // Creates a TeamList object
+    CS420TeamListADT teamList = new CS420TeamListADT(); // Creates a TeamList object
     try {
       teamList.push(new DanielPersonType("Daniel", "Vega"));
       teamList.push(new DanielPersonType("Mario", "Vega"));
@@ -11,7 +11,7 @@ class VegaStoreApp {
       teamList.push(new DanielPersonType("Peter", "Parker"));
       teamList.push(new DanielPersonType("Steve", "Rogers"));
     } catch(DanielStackOverFlowException e) {
-      System.out.println(e);
+      e.printStackTrace();
     }
     int input; // Variable to store input from user
     Scanner scanner = new Scanner(System.in);
