@@ -1,6 +1,6 @@
 package assignment2;
 
-class DanielPersonType implements Comparable<DanielPersonType> {
+public class DanielPersonType implements Comparable<DanielPersonType> {
 
   private String firstName;
   private String lastName;
@@ -40,6 +40,13 @@ class DanielPersonType implements Comparable<DanielPersonType> {
     String thisFullName = this.lastName+this.firstName;
     String otherFullName = other.getLastName()+other.getFirstName();
     return thisFullName.compareTo(otherFullName);    
+  }
+  
+  public boolean equals(DanielPersonType person) {
+    if(person.firstName.equals(this.firstName) &&
+        person.lastName.equals(this.lastName))
+      return true;
+    return false;
   }
 
   public String toString() {
