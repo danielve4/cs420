@@ -1,8 +1,8 @@
 package assignment2;
 
-public interface BoundedStackInterface<DanielPersonType> extends StackInterface<DanielPersonType> {
+public interface BoundedStackInterface<DanielPersonType> extends DanielStackInterface<DanielPersonType> {
 
-  public void push(DanielPersonType element) throws StackOverFlowException;
+  public void push(DanielPersonType element) throws DanielStackOverFlowException;
   public boolean isFull();
   
 }
