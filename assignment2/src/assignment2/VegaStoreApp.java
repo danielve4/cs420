@@ -3,12 +3,16 @@ import java.util.Scanner;
 
 class VegaStoreApp {
   public static void main(String[] args) {
-    CS420TeamListADT teamList = new CS420TeamListADT(); // Creates a TeamList object
-    teamList.addPerson(new DanielPersonType("Daniel", "Vega"));
-    teamList.addPerson(new DanielPersonType("Mario", "Vega"));
-    teamList.addPerson(new DanielPersonType("Tony", "Stark"));
-    teamList.addPerson(new DanielPersonType("Peter", "Parker"));
-    teamList.addPerson(new DanielPersonType("Steve", "Rogers"));
+    CS420TeamListADT teamList = new CS420TeamListADT(5); // Creates a TeamList object
+    try {
+      teamList.push(new DanielPersonType("Daniel", "Vega"));
+      teamList.push(new DanielPersonType("Mario", "Vega"));
+      teamList.push(new DanielPersonType("Tony", "Stark"));
+      teamList.push(new DanielPersonType("Peter", "Parker"));
+      teamList.push(new DanielPersonType("Steve", "Rogers"));
+    } catch(DanielStackOverFlowException e) {
+      System.out.println(e);
+    }
     int input; // Variable to store input from user
     Scanner scanner = new Scanner(System.in);
     do {
@@ -47,7 +51,7 @@ class VegaStoreApp {
         System.out.println("\n\n" + teamList.toString());
       break;
       case 3: 
-        teamList.deleteLastPerson();
+        teamList.pop();
       break;
       case 4:
         searchByKeyword(teamList, scanner);
@@ -69,8 +73,12 @@ class VegaStoreApp {
     fName = scanner.next();
     System.out.print("Enter person's last name\n> ");
     lName = scanner.next();
-    teamList.addPerson(new DanielPersonType(fName.trim(), lName.trim()));
-    System.out.print("\nPerson Added!");
+    try {
+      teamList.push(new DanielPersonType(fName.trim(), lName.trim()));
+      System.out.print("\nPerson Added!");
+    } catch (DanielStackOverFlowException e) {
+      System.out.println(e);
+    }
   }
 
   public static void searchByKeyword(CS420TeamListADT teamList, Scanner scanner) {
