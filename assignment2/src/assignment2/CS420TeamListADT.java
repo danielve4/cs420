@@ -1,8 +1,7 @@
 package assignment2;
-import java.util.Scanner;
 import java.util.Arrays;
 
-class CS420TeamListADT {
+class CS420TeamListADT implements BoundedStackInterface<DanielPersonType> {
   
   private final int DEFAULT_TEAM_SIZE = 100;
   private int maxTeamSize;
@@ -38,13 +37,27 @@ class CS420TeamListADT {
     return team[index].getCopy();
   }
 
-  public void addPerson(DanielPersonType aPerson) {
+  public void push(DanielPersonType aPerson) throws DanielStackOverFlowException {
+    if(this.isFull())
+       throw new DanielStackOverFlowException("The stack is full");
     this.team[teamSize] = aPerson;
     this.teamSize++;
   }
 
-  public void deleteLastPerson() {
+  public void pop() {
     this.teamSize -= 1;
+  }
+  
+  public DanielPersonType top() {
+    return this.team[this.teamSize-1];
+  }
+  
+  public boolean isEmpty() {
+    return this.teamSize == 0 ? true : false;
+  }
+  
+  public boolean isFull() {
+    return teamSize == maxTeamSize ? true :  false;
   }
 
   public void sort() {
