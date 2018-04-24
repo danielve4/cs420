@@ -1,13 +1,13 @@
 Author: Daniel Vega
-Assignment2
+Assignment 3
 
 To compile the files, run the following command:
 
-  javac assignment2/*.javac
+  javac *.javac
 
 To run the application, run the following command:
 
-  java assignment2.VegaStoreApp
+  java VegaStoreApp
 
 The application stores the first and last name of a person in a team.
 You can add another person, view existing team members, delete, sort, and search.
@@ -18,6 +18,10 @@ when attempting to push any new team members.
 
 I have also included five basic jUnit tests that deal with pushing/popping and checking
 the stack to see if it is full, empty, and the top of the stack. 
+
+This Assignment now uses Generics in place of using a single Class Name.
+In the Application class, when you want to change the type of class used,
+change DanielPersonType to the class of your choosing.
 
 Here is some sample output:
 
