@@ -1,32 +1,40 @@
-public class DanielBinaryTree {
+public class DanielBinaryTree<T extends DanielAbstractPerson> implements BoundedStackInterface<T> {
   
-  Node root;
+  Node<T> root;
 
   public DanielBinaryTree() {
     this.root = null;
   }
-
-  public DanielBinaryTree(Node node) {
-    this.root = node;
-  }
   
-  public DanielBinaryTree(String firstName, String lastName) {
-    this.root = new Node(firstName, lastName);
-  }
-
-  public Node getRoot() {
+  public Node<T> getRoot() {
     return this.root;
   }
 
-  public void setRoot(Node node) {
+  public void setRoot(Node<T> node) {
     this.root = node;
   }
 
-  public void push(String firstName, String lastName) {
+  public boolean isFull() {
+    return false;
+  }
+
+  public boolean isEmpty() {
+    return this.root == null?true:false;
+  }
+
+  public T top() {
+    return this.root.getPerson();
+  }
+
+  public void pop() {
+    
+  }
+
+  public void push(T person) {
     if(this.root != null) {
-      Node current = this.root;
+      Node<T> current = this.root;
       Node parent = null;
-      int compareInt = current.getPerson().getFullName().compareTo(lastName+firstName);
+      int compareInt = current.getPerson().compareTo(person.getFullName());
       while (current != null) {
         parent = current;
         if(compareInt > 0) {
@@ -38,17 +46,17 @@ public class DanielBinaryTree {
         } else {
           //Equal
           System.out.println("Can't insert, duplicate");
+          current = null;
         }
       }
-
-      current = new Node(firstName, lastName);
+      current = new Node(person);
       if(compareInt > 0) {
         parent.setLeft(current);
       } else if(compareInt < 0) {
         parent.setRight(current);
       }
     } else {
-      this.root = new Node(firstName, lastName);
+      this.root = new Node(person);
     }
   }
 
@@ -57,40 +65,50 @@ public class DanielBinaryTree {
   }
 
 
-  public class Node {
-    DanielPersonType person;
-    Node left;
-    Node right;
+  public class Node<T> {
+    T person;
+    Node<T> left;
+    Node<T> right;
+
+    public Node() {
+      this.person = null;
+      this.left = null;
+      this.right = null;
+    }
     
-    public Node(DanielPersonType person, Node left, Node right) {
+    public Node(T person, Node left, Node right) {
       this.person = person;
       this.left = left;
       this.right = right;
     }
+
+    public Node(T person) {
+      this.person = person;
+    }
     
-    public Node(String firstName, String lastName) {
-      this.person = new DanielPersonType(firstName, lastName);
-      this.left = null;
-      this.right = null;
+    // public Node(String firstName, String lastName) {
+    //   this.person = new DanielPersonType(firstName, lastName);
+    //   this.left = null;
+    //   this.right = null;
+    // }
+
+    public T getPerson() {
+      return this.person;
     }
 
-    public DanielPersonType getPerson() {
-      return person;
-    }
-
-    public Node getLeft() {
+    public Node<T> getLeft() {
       return this.left;
     }
 
-    public Node getRight() {
+    public Node<T> getRight() {
       return this.right;
     }
 
-    public void setLeft(Node left) {
+    public void setLeft(Node<T> left) {
       this.left = left;
     }
 
-    public void setRight(Node right) {
+    public void setRight(Node<T> right) {
       this.right = right;
     }
 

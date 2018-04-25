@@ -1,4 +1,4 @@
-public class DanielPersonType implements Comparable<DanielPersonType> {
+public class DanielPersonType extends DanielAbstractPerson implements Comparable<DanielPersonType> {
 
   private String firstName;
   private String lastName;
@@ -37,7 +37,11 @@ public class DanielPersonType implements Comparable<DanielPersonType> {
     return new DanielPersonType(this.firstName, this.lastName);
   }
 
-  @Override
+  public int compareTo(String fullName) {
+    String thisFullName = this.lastName+this.firstName;
+    return thisFullName.compareTo(fullName);
+  }
+
   public int compareTo(DanielPersonType other) {
     String thisFullName = this.lastName+this.firstName;
     String otherFullName = other.getLastName()+other.getFirstName();

@@ -5,10 +5,10 @@ class VegaStoreApp {
   public static void main(String[] args) {
     System.out.println("Comapring:" + "Vega".compareTo("Vega"));
 
-    DanielBinaryTree tree = new DanielBinaryTree();
-    tree.push("Daniel", "Vega");
-    tree.push("Mouse","Z");
-    System.out.println(tree.getRoot().getRight().getPerson().getFirstName());
+    DanielBinaryTree<DanielPersonType> tree = new DanielBinaryTree<>();
+    tree.push(new DanielPersonType("Daniel", "Vega"));
+    //tree.push(new DanielPersonType("Daniel", "Vega"));
+    System.out.println(tree.getRoot().getPerson().toString());
     CS420TeamListADT<DanielPersonType> teamList = new CS420TeamListADT<>(); // Creates a TeamList object
     try {
       teamList.push(new DanielPersonType("Daniel", "Vega"));
