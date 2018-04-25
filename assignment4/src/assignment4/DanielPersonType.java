@@ -21,6 +21,10 @@ public class DanielPersonType implements Comparable<DanielPersonType> {
     return lastName;
   }
 
+  public String getFullName() {
+    return lastName+firstName;
+  }
+
   public void setFirstName(String firstName) {
     this.firstName = firstName;
   }
