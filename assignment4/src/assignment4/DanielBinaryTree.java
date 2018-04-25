@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 public class DanielBinaryTree<T extends DanielAbstractPerson> implements BoundedStackInterface<T> {
   
   Node<T> root;
@@ -27,10 +28,19 @@ public class DanielBinaryTree<T extends DanielAbstractPerson> implements Bounded
   }
 
   public void pop() {
-    
+    if(this.isEmpty()) {
+      return;
+    }
+    Node<T> current = this.root;
+    Node<T> toDelete = this.root;
+    while(current != null) {
+      toDelete = current;
+      current = current.getRight();
+    }
+    current = null;
   }
 
-  public void push(T person) {
+  public void push(T person) throws DanielStackOverFlowException {
     if(this.root != null) {
       Node<T> current = this.root;
       Node parent = null;
@@ -60,8 +70,59 @@ public class DanielBinaryTree<T extends DanielAbstractPerson> implements Bounded
     }
   }
 
+  public void sort() {
+
+  }
+
+  public void traversalInOrder(Node<T> aNode)  {
+    if(aNode == null)
+      return;
+    traversalInOrder(aNode.getLeft());
+    System.out.println(aNode.getPerson().toString());
+    traversalInOrder(aNode.getRight());
+  }
+
+  public ArrayList<T> getTeam() throws DanielStackOverFlowException {
+    ArrayList<T> team = new ArrayList<>();
+    if(this.isEmpty())
+      return team;
+    //String str = "";
+    
+    CS420TeamListADT<Node<T>> stack = new CS420TeamListADT<>();
+    Node<T> current = this.root;
+    while(current != null) {
+      stack.push(current);
+      current = current.getLeft();
+    }
+    while(stack.getTeamSize() > 0) {
+      current = stack.top();
+      stack.pop();
+      //str += current.getPerson().toString() + "\n";
+      team.add(current.getPerson());
+      //System.out.println(current.getPerson().toString());
+      if(current.getRight() != null) {
+        current = current.getRight();
+        while(current != null) {
+          stack.push(current);
+          current = current.getLeft();
+        }
+      }
+    }
+
+    return team;
+  }
+
   public String toString() {
-    return this.root.toString();
+    try {
+      ArrayList<T> team = this.getTeam();
+      String str = "";
+      for(int i=0; i < team.size(); i++)
+        str += "Num: " + (i+1) + " - " + team.get(i).toString() + "\n";
+      return str;
+    } catch(DanielStackOverFlowException e) {
+      e.printStackTrace();
+      return "Empty";
+    }
   }
 
 

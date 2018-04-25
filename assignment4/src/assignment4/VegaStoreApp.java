@@ -2,14 +2,22 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 class VegaStoreApp {
-  public static void main(String[] args) {
+  public static void main(String[] args) throws DanielStackOverFlowException {
     System.out.println("Comapring:" + "Vega".compareTo("Vega"));
 
     DanielBinaryTree<DanielPersonType> tree = new DanielBinaryTree<>();
     tree.push(new DanielPersonType("Daniel", "Vega"));
-    //tree.push(new DanielPersonType("Daniel", "Vega"));
-    System.out.println(tree.getRoot().getPerson().toString());
-    CS420TeamListADT<DanielPersonType> teamList = new CS420TeamListADT<>(); // Creates a TeamList object
+    tree.push(new DanielPersonType("Aldo", "Verdin"));
+    tree.push(new DanielPersonType("Mario", "Vega"));
+    tree.push(new DanielPersonType("Tony", "Stark"));
+    tree.push(new DanielPersonType("Peter", "Parker"));
+    tree.push(new DanielPersonType("Steve", "Rogers"));
+    //System.out.println(tree.getRoot().getLeft().getPerson().toString());
+    //tree.traversalInOrder(tree.getRoot());
+    //System.out.println(tree.toString());
+
+    //CS420TeamListADT<DanielPersonType> teamList = new CS420TeamListADT<>(); // Creates a TeamList object
+    DanielBinaryTree<DanielPersonType> teamList = new DanielBinaryTree<>();
     try {
       teamList.push(new DanielPersonType("Daniel", "Vega"));
       teamList.push(new DanielPersonType("Mario", "Vega"));
@@ -45,7 +53,7 @@ class VegaStoreApp {
     System.out.print("\n\n" + instructions);
   }
 
-  public static void handleInput(int input, CS420TeamListADT teamList, Scanner scanner) {
+  public static void handleInput(int input, DanielBinaryTree teamList, Scanner scanner) {
     switch(input) {
       case 0:
         System.out.println("Goodbye!"); 
@@ -71,7 +79,7 @@ class VegaStoreApp {
     }
   }
 
-  public static void addPersonFromInput(CS420TeamListADT teamList, Scanner scanner) {
+  public static void addPersonFromInput(DanielBinaryTree teamList, Scanner scanner) {
     scanner.nextLine();
     String fName;
     String lName;
@@ -87,23 +95,28 @@ class VegaStoreApp {
     }
   }
 
-  public static void searchByKeyword(CS420TeamListADT teamList, Scanner scanner) {
+  public static void searchByKeyword(DanielBinaryTree teamList, Scanner scanner) {
     scanner.nextLine();
     System.out.print("Enter keyword to search by\n> ");
     String key = scanner.nextLine();
     System.out.print("\n\n");
     int numberFound=0;
-    ArrayList<DanielPersonType> team = teamList.getTeam();
-    DanielPersonType aDan;
-    for(int i=0; i < team.size(); i++) {
-      aDan = (DanielPersonType)team.get(i);
-      if(aDan.getFirstName().toLowerCase().contains(key.toLowerCase())
-      || aDan.getLastName().toLowerCase().contains(key.toLowerCase())) {
-        System.out.println(aDan.toString());
-        numberFound++;
+    try {
+      ArrayList<DanielPersonType> team = teamList.getTeam();
+    
+      DanielPersonType aDan;
+      for(int i=0; i < team.size(); i++) {
+        aDan = (DanielPersonType)team.get(i);
+        if(aDan.getFirstName().toLowerCase().contains(key.toLowerCase())
+        || aDan.getLastName().toLowerCase().contains(key.toLowerCase())) {
+          System.out.println(aDan.toString());
+          numberFound++;
+        }
       }
+      if(numberFound == 0)
+        System.out.println("No person found!");
+    } catch (DanielStackOverFlowException e) {
+      System.out.println(e);
     }
-    if(numberFound == 0)
-      System.out.println("No person found!");
   }
 }
