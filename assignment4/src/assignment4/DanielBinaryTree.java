@@ -31,13 +31,6 @@ public class DanielBinaryTree<T extends DanielAbstractPerson> implements Bounded
     if(this.isEmpty()) {
       return;
     }
-    Node<T> current = this.root;
-    Node<T> toDelete = this.root;
-    while(current != null) {
-      toDelete = current;
-      current = current.getRight();
-    }
-    current = null;
   }
 
   public void push(T person) throws DanielStackOverFlowException {
@@ -46,6 +39,7 @@ public class DanielBinaryTree<T extends DanielAbstractPerson> implements Bounded
       Node parent = null;
       int compareInt = current.getPerson().compareTo(person.getFullName());
       while (current != null) {
+        compareInt = current.getPerson().compareTo(person.getFullName());
         parent = current;
         if(compareInt > 0) {
           //Current last name comes after argument lastName
@@ -71,7 +65,7 @@ public class DanielBinaryTree<T extends DanielAbstractPerson> implements Bounded
   }
 
   public void sort() {
-
+    //Sorts on push
   }
 
   public void traversalInOrder(Node<T> aNode)  {

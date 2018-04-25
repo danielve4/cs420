@@ -2,19 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 class VegaStoreApp {
-  public static void main(String[] args) throws DanielStackOverFlowException {
-    System.out.println("Comapring:" + "Vega".compareTo("Vega"));
-
-    DanielBinaryTree<DanielPersonType> tree = new DanielBinaryTree<>();
-    tree.push(new DanielPersonType("Daniel", "Vega"));
-    tree.push(new DanielPersonType("Aldo", "Verdin"));
-    tree.push(new DanielPersonType("Mario", "Vega"));
-    tree.push(new DanielPersonType("Tony", "Stark"));
-    tree.push(new DanielPersonType("Peter", "Parker"));
-    tree.push(new DanielPersonType("Steve", "Rogers"));
-    //System.out.println(tree.getRoot().getLeft().getPerson().toString());
-    //tree.traversalInOrder(tree.getRoot());
-    //System.out.println(tree.toString());
+  public static void main(String[] args) {
 
     //CS420TeamListADT<DanielPersonType> teamList = new CS420TeamListADT<>(); // Creates a TeamList object
     DanielBinaryTree<DanielPersonType> teamList = new DanielBinaryTree<>();
