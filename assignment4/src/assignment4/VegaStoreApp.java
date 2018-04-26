@@ -12,11 +12,6 @@ class VegaStoreApp {
     //CS420TeamListADT<DanielPersonType> teamList = new CS420TeamListADT<>(); // Creates a TeamList object
     DanielBinaryTree<DanielPersonType> teamList = new DanielBinaryTree<>();
     try {
-      // teamList.push(new DanielPersonType("Daniel", "Vega"));
-      // teamList.push(new DanielPersonType("Mario", "Vega"));
-      // teamList.push(new DanielPersonType("Tony", "Stark"));
-      // teamList.push(new DanielPersonType("Peter", "Parker"));
-      // teamList.push(new DanielPersonType("Steve", "Rogers"));
       Scanner inputFile = null;
       try {
         inputFile = new Scanner(new File("input.txt"));
