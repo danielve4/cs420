@@ -1,5 +1,10 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.io.File;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.FileNotFoundException;
 
 class VegaStoreApp {
   public static void main(String[] args) {
@@ -7,11 +12,21 @@ class VegaStoreApp {
     //CS420TeamListADT<DanielPersonType> teamList = new CS420TeamListADT<>(); // Creates a TeamList object
     DanielBinaryTree<DanielPersonType> teamList = new DanielBinaryTree<>();
     try {
-      teamList.push(new DanielPersonType("Daniel", "Vega"));
-      teamList.push(new DanielPersonType("Mario", "Vega"));
-      teamList.push(new DanielPersonType("Tony", "Stark"));
-      teamList.push(new DanielPersonType("Peter", "Parker"));
-      teamList.push(new DanielPersonType("Steve", "Rogers"));
+      // teamList.push(new DanielPersonType("Daniel", "Vega"));
+      // teamList.push(new DanielPersonType("Mario", "Vega"));
+      // teamList.push(new DanielPersonType("Tony", "Stark"));
+      // teamList.push(new DanielPersonType("Peter", "Parker"));
+      // teamList.push(new DanielPersonType("Steve", "Rogers"));
+      Scanner inputFile = null;
+      try {
+        inputFile = new Scanner(new File("input.txt"));
+      } catch(FileNotFoundException e) {
+        e.printStackTrace();
+      }
+      while(inputFile.hasNext()) {
+        teamList.push(new DanielPersonType(inputFile.nextLine().trim(), inputFile.nextLine().trim()));
+        inputFile.nextLine();
+      }
     } catch(DanielStackOverFlowException e) {
       e.printStackTrace();
     }
@@ -36,6 +51,7 @@ class VegaStoreApp {
       "3 - Delete Last Team Member\n" +
       "4 - Search by keyword\n" +
       "5 - Sort by last name\n" +
+      "6 - Write Team Members to File\n" + 
       "0 - Exit\n" + 
       "> ";
     System.out.print("\n\n" + instructions);
@@ -61,9 +77,24 @@ class VegaStoreApp {
       case 5:
         teamList.sort();
       break;
+      case 6:
+        writeToFile(teamList);
+      break;
       default:
         System.out.println("Please enter a valid option");
       break;
+    }
+  }
+
+  public static void writeToFile(DanielBinaryTree teamList) {
+    try {  
+      BufferedWriter writer = new BufferedWriter(new FileWriter("output.txt"));
+      writer.write("The following are the names in the team:\n\n");
+      writer.write(teamList.toString());
+      writer.close();
+      System.out.println("\n-------The team has been written to 'output.txt'");
+    } catch(IOException e) {
+      e.printStackTrace();
     }
   }
 
