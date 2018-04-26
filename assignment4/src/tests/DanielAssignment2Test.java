@@ -1,7 +1,7 @@
 package tests;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-import assignment2.*;
+import assignment4.*;
 
 class DanielAssignment2Test {
   
