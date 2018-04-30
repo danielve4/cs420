@@ -1,0 +1,9 @@
+The following are the names in the team:
+
+Num: 1 - First Name: Richard - Last Name: Appleseed
+Num: 2 - First Name: Frida - Last Name: Kahlo
+Num: 3 - First Name: Ada - Last Name: Lovelace
+Num: 4 - First Name: Jackie - Last Name: Luna
+Num: 5 - First Name: Peter - Last Name: Parker
+Num: 6 - First Name: Tony - Last Name: Stark
+Num: 7 - First Name: Daniel - Last Name: Vega
