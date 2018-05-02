@@ -2,8 +2,8 @@ package assignment5;
 
 public class DanielStudentPersonType extends DanielAbstractPerson {
 
-  String[] classesTaken;
-  String major;
+  private String[] classesTaken;
+  private String major;
   
   public DanielStudentPersonType() {
     super();
@@ -20,6 +20,22 @@ public class DanielStudentPersonType extends DanielAbstractPerson {
     this.classesTaken = classes;
     this.major = major;
   }
+  
+  public String[] getClassesTaken() {
+    return this.classesTaken;
+  }
+  
+  public String getMajor() {
+    return this.major;
+  }
+  
+  public void setClassesTaken(String[] classes) {
+    this.classesTaken = classes;
+  }
+  
+  public void setMajor(String major) {
+    this.major = major;
+  }
 
   @Override
   public int compareTo(String fullName) {
@@ -28,6 +44,6 @@ public class DanielStudentPersonType extends DanielAbstractPerson {
   }
   
   public String toString() {
-    return "Full Name: " + firstName + " " + lastName + " - Age: " + age;
+    return "Full Name: " + firstName + " " + lastName + " - Age: " + age + " - Major: " + major;
   }
 }

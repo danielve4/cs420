@@ -42,11 +42,12 @@ public class CS420TeamListADT<T> implements BoundedStackInterface<T> {
   }
 
   @Override
-  public void push(T aPerson) throws DanielStackOverFlowException {
+  public T push(T aPerson) throws DanielStackOverFlowException {
     if(this.isFull())
        throw new DanielStackOverFlowException("The stack is full");
     this.team.add(aPerson);//[teamSize] = aPerson;
     this.teamSize++;
+    return aPerson;
   }
 
   @Override

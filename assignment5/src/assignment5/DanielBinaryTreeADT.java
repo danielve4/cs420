@@ -35,7 +35,7 @@ public class DanielBinaryTreeADT<T extends DanielAbstractPerson> implements Boun
     }
   }
 
-  public void push(T person) throws DanielStackOverFlowException {
+  public T push(T person) throws DanielStackOverFlowException {
     if(this.root != null) {
       Node<T> current = this.root;
       Node<T> parent = null;
@@ -61,8 +61,10 @@ public class DanielBinaryTreeADT<T extends DanielAbstractPerson> implements Boun
       } else if(compareInt < 0) {
         parent.setRight(current);
       }
+      return person;
     } else {
       this.root = new Node(person);
+      return person;
     }
   }
 
