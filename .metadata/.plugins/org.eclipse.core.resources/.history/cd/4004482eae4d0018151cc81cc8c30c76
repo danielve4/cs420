@@ -1,0 +1,23 @@
+package assignment5;
+
+public class DanielStudentPersonType extends DanielAbstractPerson {
+
+  public DanielStudentPersonType() {
+    this.firstName = "FirstName";
+    this.lastName = "LastName";
+  }
+
+  public DanielStudentPersonType(String firstName, String lastName, String address, int age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  @Override
+  public int compareTo(String fullName) {
+    String thisFullName = this.getFullName();
+    return thisFullName.compareTo(fullName);
+  }
+  
+  
+
+}

@@ -1,12 +1,6 @@
 .DS_Store
 *.class
 *.zip
-/.metadata/
-bin/
 .vscode
 /.gitignore
-.classpath
-.project
-.settings/
-.recommenders/
 

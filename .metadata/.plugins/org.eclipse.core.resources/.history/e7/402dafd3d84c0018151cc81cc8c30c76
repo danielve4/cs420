@@ -1,0 +1,54 @@
+package assignment5;
+
+import java.util.Scanner;
+
+public class VegaCampusDirectoryApp {
+  public static void main(String[] args) {
+    System.out.println("Hello World");
+  }
+  
+  public static void handleInput(int input, DanielBinaryTree teamList, Scanner scanner) {
+    switch(input) {
+      case 0:
+        System.out.println("Goodbye!"); 
+      break;
+      case 1:
+        addPersonFromInput(teamList, scanner);
+      break;
+      case 2: 
+        System.out.println("\n\n" + teamList.toString());
+      break;
+      case 3: 
+        teamList.pop();
+      break;
+      case 4:
+        searchByKeyword(teamList, scanner);
+      break;
+      case 5:
+        teamList.sort();
+      break;
+      case 6:
+        writeToFile(teamList);
+      break;
+      default:
+        System.out.println("Please enter a valid option");
+      break;
+    }
+  }
+  
+  public static void addPersonFromInput(DanielBinaryTree teamList, Scanner scanner) {
+    scanner.nextLine();
+    String fName;
+    String lName;
+    System.out.print("Enter person's first name\n> ");
+    fName = scanner.next();
+    System.out.print("Enter person's last name\n> ");
+    lName = scanner.next();
+    try {
+      teamList.push(new DanielPersonType(fName.trim(), lName.trim()));
+      System.out.print("\nPerson Added!");
+    } catch (DanielStackOverFlowException e) {
+      System.out.println(e);
+    }
+  }
+}

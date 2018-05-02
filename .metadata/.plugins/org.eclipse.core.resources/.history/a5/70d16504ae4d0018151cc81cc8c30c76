@@ -1,0 +1,16 @@
+package assignment5;
+
+public class DanielStudentPersonType extends DanielAbstractPerson {
+
+  public DanielStudentPersonType() {
+    // TODO Auto-generated constructor stub
+  }
+
+  @Override
+  public int compareTo(String fullName) {
+    String thisFullName = this.lastName+this.firstName;
+    return thisFullName.compareTo(fullName);
+  }
+  
+
+}

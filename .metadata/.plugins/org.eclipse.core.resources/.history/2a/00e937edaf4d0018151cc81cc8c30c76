@@ -1,0 +1,9 @@
+package assignment5;
+
+public class DanielProfessorPersonType extends DanielAbstractPerson {
+
+  public DanielProfessorPersonType() {
+    // TODO Auto-generated constructor stub
+  }
+
+}

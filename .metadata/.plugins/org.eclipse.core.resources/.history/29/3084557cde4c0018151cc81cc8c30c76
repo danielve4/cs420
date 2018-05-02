@@ -1,0 +1,16 @@
+package assignment5;
+
+public abstract class DanielAbstractPerson {
+    String firstName;
+    String lastName;
+    public String getFirstName() {
+       return firstName;
+    }
+    public String getLastName() {
+      return lastName;
+    }
+    public abstract String getFullName();
+    public abstract void setFirstName(String firstName);
+    public abstract void setLastName(String lastName);
+    public abstract int compareTo(String fullName);
+}
