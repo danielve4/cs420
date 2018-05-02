@@ -1,11 +1,11 @@
 package assignment5;
 
 import java.util.ArrayList;
-public class DanielBinaryTree<T extends DanielAbstractPerson> implements BoundedStackInterface<T> {
+public class DanielBinaryTreeADT<T extends DanielAbstractPerson> implements BoundedStackInterface<T> {
   
   Node<T> root;
 
-  public DanielBinaryTree() {
+  public DanielBinaryTreeADT() {
     this.root = null;
   }
   
@@ -38,7 +38,7 @@ public class DanielBinaryTree<T extends DanielAbstractPerson> implements Bounded
   public void push(T person) throws DanielStackOverFlowException {
     if(this.root != null) {
       Node<T> current = this.root;
-      Node parent = null;
+      Node<T> parent = null;
       int compareInt = current.getPerson().compareTo(person.getFullName());
       while (current != null) {
         compareInt = current.getPerson().compareTo(person.getFullName());
