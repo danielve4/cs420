@@ -12,15 +12,15 @@ public class VegaCampusDirectoryApp {
   public static void main(String[] args) throws DanielStackUnderFlowException {
     CS420TeamListADT<DanielAbstractPerson> teamList = new CS420TeamListADT<>();
     //DanielBinaryTreeADT<DanielAbstractPerson> teamList = new DanielBinaryTreeADT<>(); 
-    try {
-      teamList.push(new DanielPersonType("Tony", "Stark"));
-      teamList.push(new DanielPersonType("Peter", "Parker"));
-      teamList.push(new DanielPersonType("Steve", "Rogers"));
-      teamList.push(new DanielStudentPersonType("Student", "Person"));
-      teamList.push(new DanielProfessorPersonType("Professor", "TypePerson"));
-    } catch(DanielStackOverFlowException e) {
-      e.printStackTrace();
-    }
+//    try {
+//      teamList.push(new DanielPersonType("Tony", "Stark"));
+//      teamList.push(new DanielPersonType("Peter", "Parker"));
+//      teamList.push(new DanielPersonType("Steve", "Rogers"));
+//      teamList.push(new DanielStudentPersonType("Student", "Person"));
+//      teamList.push(new DanielProfessorPersonType("Professor", "TypePerson"));
+//    } catch(DanielStackOverFlowException e) {
+//      e.printStackTrace();
+//    }
     int input; // Variable to store input from user
     Scanner scanner = new Scanner(System.in);
     do {
@@ -57,7 +57,7 @@ public class VegaCampusDirectoryApp {
         System.out.println("\n\n" + teamList.toString());
       break;
       case 2: 
-        addPersonFromInput(teamList, scanner);
+        addStudentFromInput(teamList, scanner);
       break;
       case 3: 
         addProfessorFromInput(teamList, scanner);
@@ -77,17 +77,30 @@ public class VegaCampusDirectoryApp {
     }
   }
   
-  public static void addPersonFromInput(BoundedStackInterface<DanielAbstractPerson> teamList, Scanner scanner) {
+  public static void addStudentFromInput(BoundedStackInterface<DanielAbstractPerson> teamList, Scanner scanner) {
     scanner.nextLine();
+    DanielStudentPersonType professor;
     String fName;
     String lName;
-    System.out.print("Enter person's first name\n> ");
+    String age;
+    System.out.print("Enter student's first name\n> ");
     fName = scanner.next();
-    System.out.print("Enter person's last name\n> ");
+    System.out.print("Enter student's last name\n> ");
     lName = scanner.next();
     try {
-      teamList.push(new DanielPersonType(fName.trim(), lName.trim()));
-      System.out.print("\nPerson Added!");
+      professor = (DanielStudentPersonType)teamList.push(new DanielStudentPersonType(fName.trim(), lName.trim()));
+      System.out.print("Enter student's age\n> ");
+      age = scanner.next();
+      professor.setAge(Integer.parseInt(age));
+      System.out.print("Enter the class name " + fName + " is taking. Type 'done' if done entering classes\n>");
+      String aClass = scanner.next();
+      while(!aClass.toLowerCase().equals("done")) {
+        professor.addClassTaking(aClass);
+        System.out.print("Enter the class name " + fName + " is taking. Type 'done' if done entering classes\n>");
+        aClass = scanner.next();
+      }
+      System.out.println(professor.toString());
+      System.out.print("\nStudent Added!");
     } catch (DanielStackOverFlowException e) {
       System.out.println(e);
     }
@@ -108,11 +121,12 @@ public class VegaCampusDirectoryApp {
       System.out.print("Enter professor's age\n> ");
       age = scanner.next();
       professor.setAge(Integer.parseInt(age));
-      String aClass = "";
-      while(!aClass.toLowerCase().equals("\n") && !aClass.toLowerCase().equals("done")) {
+      System.out.print("Enter the class name " + fName + " is teaching. Type 'done' if done entering classes\n>");
+      String aClass = scanner.next();
+      while(!aClass.toLowerCase().equals("done")) {
+        professor.addClassTeaching(aClass);
         System.out.print("Enter the class name " + fName + " is teaching. Type 'done' if done entering classes\n>");
         aClass = scanner.next();
-        professor.addClassTeaching(aClass);
       }
       System.out.println(professor.toString());
       System.out.print("\nPerson Added!");
@@ -142,9 +156,9 @@ public class VegaCampusDirectoryApp {
     try {
       ArrayList<DanielAbstractPerson> team = teamList.getTeam();
     
-      DanielPersonType aDan;
+      DanielAbstractPerson aDan;
       for(int i=0; i < team.size(); i++) {
-        aDan = (DanielPersonType)team.get(i);
+        aDan = (DanielAbstractPerson)team.get(i);
         if(aDan.getFirstName().toLowerCase().contains(key.toLowerCase())
         || aDan.getLastName().toLowerCase().contains(key.toLowerCase())) {
           System.out.println(aDan.toString());

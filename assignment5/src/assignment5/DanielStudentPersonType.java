@@ -4,21 +4,28 @@ public class DanielStudentPersonType extends DanielAbstractPerson {
 
   private String[] classesTaken;
   private String major;
+  private int numberClassesTaking;
+  private final int MAX_NUM_CLASSES=10;
   
   public DanielStudentPersonType() {
     super();
-    this.classesTaken = null;
+    this.classesTaken = new String[this.MAX_NUM_CLASSES];
     this.major = "major";
+    this.setNumberClassesTaking(0);
   }
   
   public DanielStudentPersonType(String firstName, String lastName) {
     super(firstName, lastName);
+    this.classesTaken = new String[this.MAX_NUM_CLASSES];
+    this.major = "major";
+    this.setNumberClassesTaking(0);
   }
 
   public DanielStudentPersonType(String firstName, String lastName, String[] classes, String address, String major, int age) {
     super(firstName, lastName, address, age);
     this.classesTaken = classes;
     this.major = major;
+    this.setNumberClassesTaking(0);
   }
   
   public String[] getClassesTaken() {
@@ -29,12 +36,29 @@ public class DanielStudentPersonType extends DanielAbstractPerson {
     return this.major;
   }
   
+  public int getNumberClassesTaking() {
+    return numberClassesTaking;
+  }
+
+  public void setNumberClassesTaking(int numberClassesTaking) {
+    this.numberClassesTaking = numberClassesTaking;
+  }
+
   public void setClassesTaken(String[] classes) {
     this.classesTaken = classes;
   }
   
   public void setMajor(String major) {
     this.major = major;
+  }
+  
+  public boolean addClassTaking(String aClass) {
+    if(this.numberClassesTaking < this.MAX_NUM_CLASSES) {
+      this.classesTaken[this.numberClassesTaking] = aClass;
+      this.numberClassesTaking++;
+      return true;
+    }
+    return false;
   }
 
   @Override
@@ -44,6 +68,10 @@ public class DanielStudentPersonType extends DanielAbstractPerson {
   }
   
   public String toString() {
-    return "Full Name: " + firstName + " " + lastName + " - Age: " + age + " - Major: " + major;
+    String str = "Full Name: " + firstName + " " + lastName + " - Age: " + age + " - Major: " + major + "\nTaking: ";
+    for(int i=0;i<this.numberClassesTaking;i++) {
+      str+= this.classesTaken[i] + ", "; 
+    }
+    return str;
   }
 }
