@@ -1,0 +1,9 @@
+The following are the names in the team:
+
+Num: 1 - First Name: Peter - Last Name: Parker
+Num: 2 - Full Name: Student Person - Age: 0 - Major: major
+Taking: 
+Num: 3 - First Name: Steve - Last Name: Rogers
+Num: 4 - First Name: Tony - Last Name: Stark
+Num: 5 - Full Name: Professor TypePerson - Age: 0
+Teaching: 

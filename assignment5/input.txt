@@ -1,0 +1,49 @@
+1
+Daniel
+Vega
+23
+CS420
+CS408
+CS422
+.
+2
+Tony
+Stark
+35
+CS450
+CS440
+.
+1
+Peter
+Parker
+20
+Math300
+Math330
+Physics345
+Humanities
+.
+2
+Frida
+Kahlo
+40
+Art 101
+Humanities 400
+Art 300
+.
+2
+Ada
+Lovelace
+45
+CS400
+CS404
+CS500
+.
+1
+Steve
+Rogers
+19
+Humanities
+CS100
+Math144
+Physics 120
+.

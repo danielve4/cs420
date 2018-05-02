@@ -10,17 +10,22 @@ import java.io.FileNotFoundException;
 
 public class VegaCampusDirectoryApp {
   public static void main(String[] args) throws DanielStackUnderFlowException {
-    CS420TeamListADT<DanielAbstractPerson> teamList = new CS420TeamListADT<>();
-    //DanielBinaryTreeADT<DanielAbstractPerson> teamList = new DanielBinaryTreeADT<>(); 
-//    try {
-//      teamList.push(new DanielPersonType("Tony", "Stark"));
-//      teamList.push(new DanielPersonType("Peter", "Parker"));
-//      teamList.push(new DanielPersonType("Steve", "Rogers"));
-//      teamList.push(new DanielStudentPersonType("Student", "Person"));
-//      teamList.push(new DanielProfessorPersonType("Professor", "TypePerson"));
-//    } catch(DanielStackOverFlowException e) {
-//      e.printStackTrace();
-//    }
+    //CS420TeamListADT<DanielAbstractPerson> teamList = new CS420TeamListADT<>();
+    DanielBinaryTreeADT<DanielAbstractPerson> teamList = new DanielBinaryTreeADT<>(); 
+    try {
+      Scanner inputFile = null;
+      try {
+        inputFile = new Scanner(new File("input.txt"));
+      } catch(FileNotFoundException e) {
+        e.printStackTrace();
+      }
+      while(inputFile.hasNext()) {
+        teamList.push(new DanielPersonType(inputFile.nextLine().trim(), inputFile.nextLine().trim()));
+        inputFile.nextLine();
+      }
+    } catch(DanielStackOverFlowException e) {
+      e.printStackTrace();
+    }
     int input; // Variable to store input from user
     Scanner scanner = new Scanner(System.in);
     do {
@@ -42,7 +47,7 @@ public class VegaCampusDirectoryApp {
       "3 - Add Professor\n" +
       "4 - Search by keyword\n" +
       "5 - Sort by last name\n" +
-      "6 - Write Team Members to File\n" + 
+      "6 - Write Team Members to File 'output.txt'\n" + 
       "0 - Exit\n" + 
       "> ";
     System.out.print("\n\n" + instructions);
@@ -92,11 +97,11 @@ public class VegaCampusDirectoryApp {
       System.out.print("Enter student's age\n> ");
       age = scanner.next();
       professor.setAge(Integer.parseInt(age));
-      System.out.print("Enter the class name " + fName + " is taking. Type 'done' if done entering classes\n>");
+      System.out.print("Enter the class name " + fName + " is taking. Type 'done' if done entering classes\n> ");
       String aClass = scanner.next();
       while(!aClass.toLowerCase().equals("done")) {
         professor.addClassTaking(aClass);
-        System.out.print("Enter the class name " + fName + " is taking. Type 'done' if done entering classes\n>");
+        System.out.print("Enter the class name " + fName + " is taking. Type 'done' if done entering classes\n> ");
         aClass = scanner.next();
       }
       System.out.println(professor.toString());
