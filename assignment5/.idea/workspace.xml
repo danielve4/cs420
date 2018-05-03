@@ -19,133 +19,63 @@
               <ID>JAVA</ID>
               <OriginalElement>assignment5</OriginalElement>
               <nodes>
-                <node x="363.64974647266297" y="786.0">assignment5.DanielBinaryTreeADT</node>
-                <node x="489.12499999999994" y="402.5">assignment5.DanielBinaryTreeADT.Node</node>
-                <node x="647.649746472663" y="796.5">assignment5.DanielStudentPersonType</node>
-                <node x="0.0" y="168.5">assignment5.DanielStackOverFlowException</node>
-                <node x="1159.649746472663" y="807.5">assignment5.DanielProfessorPersonType</node>
-                <node x="713.3122795414461" y="1129.0">assignment5.VegaCampusDirectoryApp</node>
-                <node x="1662.649746472663" y="797.0">assignment5.DanielPersonType</node>
-                <node x="1097.149746472663" y="380.5">assignment5.DanielAbstractPerson</node>
-                <node x="673.4830798059963" y="146.0">assignment5.BoundedStackInterface</node>
-                <node x="682.9830798059963" y="0.0">assignment5.DanielStackInterface</node>
-                <node x="138.125" y="314.0">assignment5.CS420TeamListADT</node>
+                <node x="1315.0" y="469.5">assignment5.DanielBinaryTreeADT</node>
+                <node x="1344.5" y="837.0">assignment5.DanielBinaryTreeADT.Node</node>
+                <node x="803.0" y="480.0">assignment5.DanielStudentPersonType</node>
+                <node x="650.0" y="1067.0">assignment5.DanielStackOverFlowException</node>
+                <node x="0.0" y="491.0">assignment5.DanielProfessorPersonType</node>
+                <node x="0.0" y="1067.0">assignment5.VegaCampusDirectoryApp</node>
+                <node x="502.0" y="480.5">assignment5.DanielPersonType</node>
+                <node x="662.75" y="146.0">assignment5.DanielAbstractPerson</node>
+                <node x="1546.611111111111" y="201.5">assignment5.BoundedStackInterface</node>
+                <node x="1556.111111111111" y="0.0">assignment5.DanielStackInterface</node>
+                <node x="1599.0" y="425.0">assignment5.CS420TeamListADT</node>
               </nodes>
               <notes />
               <edges>
-                <edge source="assignment5.VegaCampusDirectoryApp" target="assignment5.DanielAbstractPerson">
-                  <point x="201.66666666666663" y="-91.5" />
-                  <point x="1217.4789462081126" y="1099.0" />
-                  <point x="1652.149746472663" y="1099.0" />
-                  <point x="1652.149746472663" y="756.0" />
-                  <point x="1384.7211750440915" y="756.0" />
-                  <point x="104.57142857142867" y="114.5" />
-                </edge>
                 <edge source="assignment5.DanielStudentPersonType" target="assignment5.DanielAbstractPerson">
-                  <point x="-123.0" y="-126.0" />
-                  <point x="770.649746472663" y="756.0" />
-                  <point x="1175.5783179012344" y="756.0" />
-                  <point x="-104.57142857142856" y="114.5" />
-                </edge>
-                <edge source="assignment5.DanielBinaryTreeADT" target="assignment5.DanielStackOverFlowException">
-                  <point x="-117.33333333333326" y="-136.5" />
-                  <point x="378.3164131393297" y="766.0" />
-                  <point x="108.16666666666652" y="766.0" />
-                  <point x="108.16666666666652" y="289.0" />
-                  <point x="154.0" y="289.0" />
-                  <point x="0.0" y="36.5" />
+                  <point x="1.1368683772161603E-13" y="-126.0" />
+                  <point x="1049.0" y="405.0" />
+                  <point x="891.5" y="405.0" />
+                  <point x="45.75" y="114.5" />
                 </edge>
                 <edge source="assignment5.CS420TeamListADT" target="assignment5.BoundedStackInterface">
-                  <point x="82.75" y="-181.0" />
-                  <point x="386.375" y="289.0" />
-                  <point x="705.4830798059963" y="289.0" />
-                  <point x="-64.0" y="59.0" />
-                </edge>
-                <edge source="assignment5.CS420TeamListADT" target="assignment5.DanielStackOverFlowException">
-                  <point x="-82.75" y="-181.0" />
-                  <point x="220.875" y="289.0" />
-                  <point x="256.66666666666674" y="289.0" />
-                  <point x="102.66666666666674" y="36.5" />
-                </edge>
-                <edge source="assignment5.VegaCampusDirectoryApp" target="assignment5.BoundedStackInterface">
-                  <point x="268.8888888888889" y="-91.5" />
-                  <point x="1284.701168430335" y="1109.0" />
-                  <point x="1954.149746472663" y="1109.0" />
-                  <point x="1954.149746472663" y="289.0" />
-                  <point x="833.4830798059963" y="289.0" />
-                  <point x="64.0" y="59.0" />
+                  <point x="0.0" y="-181.0" />
+                  <point x="1764.5" y="405.0" />
+                  <point x="1690.611111111111" y="405.0" />
+                  <point x="48.0" y="59.0" />
                 </edge>
                 <edge source="assignment5.DanielBinaryTreeADT.Node" target="assignment5.DanielBinaryTreeADT">
-                  <point x="76.875" y="92.5" />
-                  <point x="668.5" y="726.0" />
-                  <point x="554.3164131393297" y="726.0" />
-                  <point x="58.66666666666674" y="-136.5" />
-                </edge>
-                <edge source="assignment5.VegaCampusDirectoryApp" target="assignment5.DanielBinaryTreeADT">
-                  <point x="-201.66666666666669" y="-91.5" />
-                  <point x="814.1456128747793" y="1099.0" />
-                  <point x="429.64974647266297" y="1099.0" />
-                  <point x="-66.0" y="136.5" />
-                </edge>
-                <edge source="assignment5.DanielBinaryTreeADT" target="assignment5.DanielBinaryTreeADT.Node">
-                  <point x="29.333333333333258" y="-136.5" />
-                  <point x="524.9830798059962" y="716.0" />
-                  <point x="617.25" y="716.0" />
-                  <point x="25.625" y="92.5" />
+                  <point x="0.0" y="-92.5" />
+                  <point x="0.0" y="136.5" />
                 </edge>
                 <edge source="assignment5.BoundedStackInterface" target="assignment5.DanielStackInterface">
                   <point x="0.0" y="-59.0" />
                   <point x="0.0" y="48.0" />
                 </edge>
-                <edge source="assignment5.VegaCampusDirectoryApp" target="assignment5.DanielProfessorPersonType">
-                  <point x="134.44444444444446" y="-91.5" />
-                  <point x="1150.2567239858904" y="1089.0" />
-                  <point x="1521.149746472663" y="1089.0" />
-                  <point x="120.5" y="115.0" />
-                </edge>
                 <edge source="assignment5.DanielProfessorPersonType" target="assignment5.DanielAbstractPerson">
-                  <point x="120.5" y="-115.0" />
-                  <point x="1521.149746472663" y="766.0" />
-                  <point x="1332.4354607583773" y="766.0" />
-                  <point x="52.285714285714334" y="114.5" />
+                  <point x="0.0" y="-115.0" />
+                  <point x="241.0" y="395.0" />
+                  <point x="708.5" y="395.0" />
+                  <point x="-137.25" y="114.5" />
                 </edge>
                 <edge source="assignment5.DanielPersonType" target="assignment5.DanielAbstractPerson">
                   <point x="0.0" y="-125.5" />
-                  <point x="1803.149746472663" y="746.0" />
-                  <point x="1437.0068893298057" y="746.0" />
-                  <point x="156.8571428571429" y="114.5" />
-                </edge>
-                <edge source="assignment5.VegaCampusDirectoryApp" target="assignment5.DanielStackOverFlowException">
-                  <point x="-268.8888888888889" y="-91.5" />
-                  <point x="746.9233906525571" y="1109.0" />
-                  <point x="97.16666666666652" y="1109.0" />
-                  <point x="97.16666666666652" y="289.0" />
-                  <point x="51.33333333333326" y="289.0" />
-                  <point x="-102.66666666666674" y="36.5" />
-                </edge>
-                <edge source="assignment5.VegaCampusDirectoryApp" target="assignment5.DanielStudentPersonType">
-                  <point x="0.0" y="-91.5" />
-                  <point x="123.0" y="126.0" />
-                </edge>
-                <edge source="assignment5.DanielBinaryTreeADT" target="assignment5.CS420TeamListADT">
-                  <point x="-88.0" y="-136.5" />
-                  <point x="407.64974647266297" y="756.0" />
-                  <point x="220.875" y="756.0" />
-                  <point x="-82.75" y="181.0" />
+                  <point x="642.5" y="405.0" />
+                  <point x="800.0" y="405.0" />
+                  <point x="-45.75" y="114.5" />
                 </edge>
                 <edge source="assignment5.DanielBinaryTreeADT" target="assignment5.BoundedStackInterface">
-                  <point x="88.0" y="-136.5" />
-                  <point x="583.649746472663" y="736.0" />
-                  <point x="827.8626543209875" y="736.0" />
-                  <point x="827.8626543209875" y="289.0" />
-                  <point x="769.4830798059963" y="289.0" />
-                  <point x="0.0" y="59.0" />
+                  <point x="66.0" y="-136.5" />
+                  <point x="1513.0" y="405.0" />
+                  <point x="1594.611111111111" y="405.0" />
+                  <point x="-48.0" y="59.0" />
                 </edge>
                 <edge source="assignment5.DanielBinaryTreeADT" target="assignment5.DanielAbstractPerson">
-                  <point x="117.33333333333326" y="-136.5" />
-                  <point x="612.9830798059962" y="746.0" />
-                  <point x="1123.29260361552" y="746.0" />
-                  <point x="-156.8571428571429" y="114.5" />
+                  <point x="-66.0" y="-136.5" />
+                  <point x="1381.0" y="395.0" />
+                  <point x="983.0" y="395.0" />
+                  <point x="137.25" y="114.5" />
                 </edge>
               </edges>
               <settings layout="Hierarchic Group" zoom="0.6771771771771773" x="986.0" y="655.9999999999999" />
@@ -280,12 +210,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525299602377</updated>
-      <workItem from="1525299609145" duration="2726000" />
+      <workItem from="1525299609145" duration="2891000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2726000" />
+    <option name="totallyTimeSpent" value="2891000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1680" height="1028" extended-state="6" />
@@ -350,133 +280,63 @@
           <ID>JAVA</ID>
           <OriginalElement>assignment5</OriginalElement>
           <nodes>
-            <node x="363.64974647266297" y="786.0">assignment5.DanielBinaryTreeADT</node>
-            <node x="489.12499999999994" y="402.5">assignment5.DanielBinaryTreeADT.Node</node>
-            <node x="647.649746472663" y="796.5">assignment5.DanielStudentPersonType</node>
-            <node x="0.0" y="168.5">assignment5.DanielStackOverFlowException</node>
-            <node x="1159.649746472663" y="807.5">assignment5.DanielProfessorPersonType</node>
-            <node x="713.3122795414461" y="1129.0">assignment5.VegaCampusDirectoryApp</node>
-            <node x="1662.649746472663" y="797.0">assignment5.DanielPersonType</node>
-            <node x="1097.149746472663" y="380.5">assignment5.DanielAbstractPerson</node>
-            <node x="673.4830798059963" y="146.0">assignment5.BoundedStackInterface</node>
-            <node x="682.9830798059963" y="0.0">assignment5.DanielStackInterface</node>
-            <node x="138.125" y="314.0">assignment5.CS420TeamListADT</node>
+            <node x="1315.0" y="469.5">assignment5.DanielBinaryTreeADT</node>
+            <node x="1344.5" y="837.0">assignment5.DanielBinaryTreeADT.Node</node>
+            <node x="803.0" y="480.0">assignment5.DanielStudentPersonType</node>
+            <node x="650.0" y="1067.0">assignment5.DanielStackOverFlowException</node>
+            <node x="0.0" y="491.0">assignment5.DanielProfessorPersonType</node>
+            <node x="0.0" y="1067.0">assignment5.VegaCampusDirectoryApp</node>
+            <node x="502.0" y="480.5">assignment5.DanielPersonType</node>
+            <node x="662.75" y="146.0">assignment5.DanielAbstractPerson</node>
+            <node x="1546.611111111111" y="201.5">assignment5.BoundedStackInterface</node>
+            <node x="1556.111111111111" y="0.0">assignment5.DanielStackInterface</node>
+            <node x="1599.0" y="425.0">assignment5.CS420TeamListADT</node>
           </nodes>
           <notes />
           <edges>
-            <edge source="assignment5.VegaCampusDirectoryApp" target="assignment5.DanielAbstractPerson">
-              <point x="201.66666666666663" y="-91.5" />
-              <point x="1217.4789462081126" y="1099.0" />
-              <point x="1652.149746472663" y="1099.0" />
-              <point x="1652.149746472663" y="756.0" />
-              <point x="1384.7211750440915" y="756.0" />
-              <point x="104.57142857142867" y="114.5" />
-            </edge>
             <edge source="assignment5.DanielStudentPersonType" target="assignment5.DanielAbstractPerson">
-              <point x="-123.0" y="-126.0" />
-              <point x="770.649746472663" y="756.0" />
-              <point x="1175.5783179012344" y="756.0" />
-              <point x="-104.57142857142856" y="114.5" />
-            </edge>
-            <edge source="assignment5.DanielBinaryTreeADT" target="assignment5.DanielStackOverFlowException">
-              <point x="-117.33333333333326" y="-136.5" />
-              <point x="378.3164131393297" y="766.0" />
-              <point x="108.16666666666652" y="766.0" />
-              <point x="108.16666666666652" y="289.0" />
-              <point x="154.0" y="289.0" />
-              <point x="0.0" y="36.5" />
+              <point x="1.1368683772161603E-13" y="-126.0" />
+              <point x="1049.0" y="405.0" />
+              <point x="891.5" y="405.0" />
+              <point x="45.75" y="114.5" />
             </edge>
             <edge source="assignment5.CS420TeamListADT" target="assignment5.BoundedStackInterface">
-              <point x="82.75" y="-181.0" />
-              <point x="386.375" y="289.0" />
-              <point x="705.4830798059963" y="289.0" />
-              <point x="-64.0" y="59.0" />
-            </edge>
-            <edge source="assignment5.CS420TeamListADT" target="assignment5.DanielStackOverFlowException">
-              <point x="-82.75" y="-181.0" />
-              <point x="220.875" y="289.0" />
-              <point x="256.66666666666674" y="289.0" />
-              <point x="102.66666666666674" y="36.5" />
-            </edge>
-            <edge source="assignment5.VegaCampusDirectoryApp" target="assignment5.BoundedStackInterface">
-              <point x="268.8888888888889" y="-91.5" />
-              <point x="1284.701168430335" y="1109.0" />
-              <point x="1954.149746472663" y="1109.0" />
-              <point x="1954.149746472663" y="289.0" />
-              <point x="833.4830798059963" y="289.0" />
-              <point x="64.0" y="59.0" />
+              <point x="0.0" y="-181.0" />
+              <point x="1764.5" y="405.0" />
+              <point x="1690.611111111111" y="405.0" />
+              <point x="48.0" y="59.0" />
             </edge>
             <edge source="assignment5.DanielBinaryTreeADT.Node" target="assignment5.DanielBinaryTreeADT">
-              <point x="76.875" y="92.5" />
-              <point x="668.5" y="726.0" />
-              <point x="554.3164131393297" y="726.0" />
-              <point x="58.66666666666674" y="-136.5" />
-            </edge>
-            <edge source="assignment5.VegaCampusDirectoryApp" target="assignment5.DanielBinaryTreeADT">
-              <point x="-201.66666666666669" y="-91.5" />
-              <point x="814.1456128747793" y="1099.0" />
-              <point x="429.64974647266297" y="1099.0" />
-              <point x="-66.0" y="136.5" />
-            </edge>
-            <edge source="assignment5.DanielBinaryTreeADT" target="assignment5.DanielBinaryTreeADT.Node">
-              <point x="29.333333333333258" y="-136.5" />
-              <point x="524.9830798059962" y="716.0" />
-              <point x="617.25" y="716.0" />
-              <point x="25.625" y="92.5" />
+              <point x="0.0" y="-92.5" />
+              <point x="0.0" y="136.5" />
             </edge>
             <edge source="assignment5.BoundedStackInterface" target="assignment5.DanielStackInterface">
               <point x="0.0" y="-59.0" />
               <point x="0.0" y="48.0" />
             </edge>
-            <edge source="assignment5.VegaCampusDirectoryApp" target="assignment5.DanielProfessorPersonType">
-              <point x="134.44444444444446" y="-91.5" />
-              <point x="1150.2567239858904" y="1089.0" />
-              <point x="1521.149746472663" y="1089.0" />
-              <point x="120.5" y="115.0" />
-            </edge>
             <edge source="assignment5.DanielProfessorPersonType" target="assignment5.DanielAbstractPerson">
-              <point x="120.5" y="-115.0" />
-              <point x="1521.149746472663" y="766.0" />
-              <point x="1332.4354607583773" y="766.0" />
-              <point x="52.285714285714334" y="114.5" />
+              <point x="0.0" y="-115.0" />
+              <point x="241.0" y="395.0" />
+              <point x="708.5" y="395.0" />
+              <point x="-137.25" y="114.5" />
             </edge>
             <edge source="assignment5.DanielPersonType" target="assignment5.DanielAbstractPerson">
               <point x="0.0" y="-125.5" />
-              <point x="1803.149746472663" y="746.0" />
-              <point x="1437.0068893298057" y="746.0" />
-              <point x="156.8571428571429" y="114.5" />
-            </edge>
-            <edge source="assignment5.VegaCampusDirectoryApp" target="assignment5.DanielStackOverFlowException">
-              <point x="-268.8888888888889" y="-91.5" />
-              <point x="746.9233906525571" y="1109.0" />
-              <point x="97.16666666666652" y="1109.0" />
-              <point x="97.16666666666652" y="289.0" />
-              <point x="51.33333333333326" y="289.0" />
-              <point x="-102.66666666666674" y="36.5" />
-            </edge>
-            <edge source="assignment5.VegaCampusDirectoryApp" target="assignment5.DanielStudentPersonType">
-              <point x="0.0" y="-91.5" />
-              <point x="123.0" y="126.0" />
-            </edge>
-            <edge source="assignment5.DanielBinaryTreeADT" target="assignment5.CS420TeamListADT">
-              <point x="-88.0" y="-136.5" />
-              <point x="407.64974647266297" y="756.0" />
-              <point x="220.875" y="756.0" />
-              <point x="-82.75" y="181.0" />
+              <point x="642.5" y="405.0" />
+              <point x="800.0" y="405.0" />
+              <point x="-45.75" y="114.5" />
             </edge>
             <edge source="assignment5.DanielBinaryTreeADT" target="assignment5.BoundedStackInterface">
-              <point x="88.0" y="-136.5" />
-              <point x="583.649746472663" y="736.0" />
-              <point x="827.8626543209875" y="736.0" />
-              <point x="827.8626543209875" y="289.0" />
-              <point x="769.4830798059963" y="289.0" />
-              <point x="0.0" y="59.0" />
+              <point x="66.0" y="-136.5" />
+              <point x="1513.0" y="405.0" />
+              <point x="1594.611111111111" y="405.0" />
+              <point x="-48.0" y="59.0" />
             </edge>
             <edge source="assignment5.DanielBinaryTreeADT" target="assignment5.DanielAbstractPerson">
-              <point x="117.33333333333326" y="-136.5" />
-              <point x="612.9830798059962" y="746.0" />
-              <point x="1123.29260361552" y="746.0" />
-              <point x="-156.8571428571429" y="114.5" />
+              <point x="-66.0" y="-136.5" />
+              <point x="1381.0" y="395.0" />
+              <point x="983.0" y="395.0" />
+              <point x="137.25" y="114.5" />
             </edge>
           </edges>
           <settings layout="Hierarchic Group" zoom="0.6771771771771773" x="986.0" y="655.9999999999999" />
