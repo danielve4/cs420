@@ -52,7 +52,7 @@ public class DanielBinaryTreeADT<T extends DanielAbstractPerson> implements Boun
         } else {
           //Equal
           System.out.println("Can't insert, duplicate");
-          current = null;
+          return null;
         }
       }
       current = new Node(person);
@@ -115,7 +115,7 @@ public class DanielBinaryTreeADT<T extends DanielAbstractPerson> implements Boun
       ArrayList<T> team = this.getTeam();
       String str = "";
       for(int i=0; i < team.size(); i++)
-        str += "Num: " + (i+1) + " - " + team.get(i).toString() + "\n";
+        str += "Num: " + (i+1) + " - " + team.get(i).toString() + "\n\n";
       return str;
     } catch(DanielStackOverFlowException e) {
       e.printStackTrace();

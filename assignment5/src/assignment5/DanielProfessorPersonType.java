@@ -57,7 +57,7 @@ public class DanielProfessorPersonType extends DanielAbstractPerson {
   }
   
   public String toString() {
-    String str = "Full Name: " + firstName + " " + lastName + " - Age: " + age + "\n" + "Teaching: ";
+    String str = "Professor - Full Name: " + firstName + " " + lastName + " - Age: " + age + "\n" + "Teaching: ";
     for(int i=0;i<this.numberClassesTeaching;i++) {
       str+= this.classesTeaching[i] + ", "; 
     }

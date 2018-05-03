@@ -48,3 +48,58 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.
 
 !ENTRY org.eclipse.core.net 1 0 2018-05-02 17:30:02.476
 !MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2018-05-02 19:06:23.460 -----------------------------------------------
+eclipse.buildId=4.7.2.M20171130-0510
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -keyring /Users/daniel/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -data file:/Users/daniel/Documents/cs420/ -product org.eclipse.epp.package.java.product -keyring /Users/daniel/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2018-05-02 19:06:27.678
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.acceleo.engine 4 4 2018-05-02 19:06:40.156
+!MESSAGE org.eclipse.emf.codegen.merge.java.JMerger cannot be found by org.eclipse.acceleo.engine_3.6.6.201610060831
+!STACK 0
+java.lang.ClassNotFoundException: org.eclipse.emf.codegen.merge.java.JMerger cannot be found by org.eclipse.acceleo.engine_3.6.6.201610060831
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:484)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:387)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at org.eclipse.acceleo.engine.generation.writers.AcceleoFileWriter.close(AcceleoFileWriter.java:126)
+	at org.eclipse.acceleo.engine.generation.strategy.DefaultStrategy.flushWriter(DefaultStrategy.java:233)
+	at org.eclipse.acceleo.engine.internal.evaluation.AcceleoEvaluationContext.closeContext(AcceleoEvaluationContext.java:411)
+	at org.eclipse.acceleo.engine.internal.evaluation.AcceleoEvaluationVisitor.visitAcceleoFileBlock(AcceleoEvaluationVisitor.java:434)
+	at org.eclipse.acceleo.engine.internal.evaluation.AcceleoEvaluationVisitor.switchExpression(AcceleoEvaluationVisitor.java:1934)
+	at org.eclipse.acceleo.engine.internal.evaluation.AcceleoEvaluationVisitor.visitExpression(AcceleoEvaluationVisitor.java:1048)
+	at org.eclipse.acceleo.engine.internal.evaluation.AcceleoEvaluationVisitor.visitAcceleoTemplate(AcceleoEvaluationVisitor.java:921)
+	at org.eclipse.acceleo.engine.internal.evaluation.AcceleoEvaluationVisitor.switchExpression(AcceleoEvaluationVisitor.java:1905)
+	at org.eclipse.acceleo.engine.internal.evaluation.AcceleoEvaluationVisitor.visitExpression(AcceleoEvaluationVisitor.java:1048)
+	at org.eclipse.ocl.internal.evaluation.QueryImpl.evaluate(QueryImpl.java:146)
+	at org.eclipse.ocl.ecore.QueryImpl.evaluate(QueryImpl.java:56)
+	at org.eclipse.acceleo.engine.generation.AcceleoEngine.doEvaluate(AcceleoEngine.java:365)
+	at org.eclipse.acceleo.engine.generation.AcceleoEngine.evaluate(AcceleoEngine.java:142)
+	at org.eclipse.acceleo.engine.service.AcceleoService.doGenerateTemplate(AcceleoService.java:984)
+	at org.eclipse.acceleo.engine.service.AcceleoService.doGenerate(AcceleoService.java:831)
+	at org.eclipse.acceleo.engine.service.AcceleoService.doGenerate(AcceleoService.java:771)
+	at org.eclipse.acceleo.engine.service.AcceleoService.doGenerate(AcceleoService.java:465)
+	at org.eclipse.acceleo.internal.ide.ui.generators.AcceleoUIGenerator.generate(AcceleoUIGenerator.java:481)
+	at org.eclipse.acceleo.internal.ide.ui.generators.AcceleoUIGenerator.generateJavaClass(AcceleoUIGenerator.java:184)
+	at org.eclipse.acceleo.internal.ide.ui.builders.runner.CreateRunnableAcceleoOperation.run(CreateRunnableAcceleoOperation.java:172)
+	at org.eclipse.acceleo.internal.ide.ui.builders.AcceleoBuilder.build(AcceleoBuilder.java:213)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:142)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:232)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)

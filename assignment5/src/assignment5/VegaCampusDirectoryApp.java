@@ -24,11 +24,11 @@ public class VegaCampusDirectoryApp {
         if(inputFile.nextLine().trim().equals("1")) {
           DanielStudentPersonType person = (DanielStudentPersonType)teamList.push(new DanielStudentPersonType(inputFile.nextLine().trim(), inputFile.nextLine().trim()));
           person.setAge(Integer.parseInt(inputFile.nextLine().trim()));
+          person.setMajor(inputFile.nextLine().trim());
           str = inputFile.nextLine();
           while(!str.trim().equals(".")) {
             person.addClassTaking(str);
             str = inputFile.nextLine();
-            System.out.println(str);
           }
         } else {
           DanielProfessorPersonType person = (DanielProfessorPersonType)teamList.push(new DanielProfessorPersonType(inputFile.nextLine().trim(), inputFile.nextLine().trim()));
@@ -37,11 +37,8 @@ public class VegaCampusDirectoryApp {
           while(!str.trim().equals(".")) {
             person.addClassTeaching(str);
             str = inputFile.nextLine();
-            System.out.println(str);
           }
         }
-        //teamList.push(new DanielPersonType(inputFile.nextLine().trim(), inputFile.nextLine().trim()));
-        //inputFile.nextLine();
       }
     } catch(DanielStackOverFlowException e) {
       e.printStackTrace();
@@ -70,7 +67,8 @@ public class VegaCampusDirectoryApp {
       "6 - Write Team Members to File 'output.txt'\n" + 
       "0 - Exit\n" + 
       "> ";
-    System.out.print("\n\n" + instructions);
+    System.out.println("-----------------------------------");
+    System.out.print(instructions);
   }
   
   public static void handleInput(int input, BoundedStackInterface<DanielAbstractPerson> teamList, Scanner scanner) throws DanielStackUnderFlowException {
@@ -79,7 +77,7 @@ public class VegaCampusDirectoryApp {
         System.out.println("Goodbye!"); 
       break;
       case 1:
-        System.out.println("\n\n" + teamList.toString());
+        System.out.println("\n" + teamList.toString());
       break;
       case 2: 
         addStudentFromInput(teamList, scanner);
@@ -104,28 +102,34 @@ public class VegaCampusDirectoryApp {
   
   public static void addStudentFromInput(BoundedStackInterface<DanielAbstractPerson> teamList, Scanner scanner) {
     scanner.nextLine();
-    DanielStudentPersonType professor;
+    DanielStudentPersonType student = null;
     String fName;
     String lName;
     String age;
+    String major;
     System.out.print("Enter student's first name\n> ");
-    fName = scanner.next();
+    fName = scanner.nextLine();
     System.out.print("Enter student's last name\n> ");
-    lName = scanner.next();
+    lName = scanner.nextLine();
     try {
-      professor = (DanielStudentPersonType)teamList.push(new DanielStudentPersonType(fName.trim(), lName.trim()));
-      System.out.print("Enter student's age\n> ");
-      age = scanner.next();
-      professor.setAge(Integer.parseInt(age));
-      System.out.print("Enter the class name " + fName + " is taking. Type 'done' if done entering classes\n> ");
-      String aClass = scanner.next();
-      while(!aClass.toLowerCase().equals("done")) {
-        professor.addClassTaking(aClass);
+      student = (DanielStudentPersonType)teamList.push(new DanielStudentPersonType(fName.trim(), lName.trim()));
+      if(student != null) {
+        System.out.print("Enter student's age\n> ");
+        age = scanner.nextLine().trim();
+        student.setAge(Integer.parseInt(age));
+        System.out.println("Enter student's major\n> ");
+        major = scanner.nextLine();
+        student.setMajor(major);
         System.out.print("Enter the class name " + fName + " is taking. Type 'done' if done entering classes\n> ");
-        aClass = scanner.next();
+        String aClass = scanner.nextLine();
+        while(!aClass.toLowerCase().equals("done")) {
+          student.addClassTaking(aClass);
+          System.out.print("Enter the class name " + fName + " is taking. Type 'done' if done entering classes\n> ");
+          aClass = scanner.nextLine();
+        }
+        System.out.println(student.toString());
+        System.out.print("\nStudent Added!");
       }
-      System.out.println(professor.toString());
-      System.out.print("\nStudent Added!");
     } catch (DanielStackOverFlowException e) {
       System.out.println(e);
     }
@@ -133,28 +137,31 @@ public class VegaCampusDirectoryApp {
   
   public static void addProfessorFromInput(BoundedStackInterface<DanielAbstractPerson> teamList, Scanner scanner) {
     scanner.nextLine();
-    DanielProfessorPersonType professor;
+    DanielProfessorPersonType professor = null;
     String fName;
     String lName;
     String age;
     System.out.print("Enter professor's first name\n> ");
-    fName = scanner.next();
+    fName = scanner.nextLine();
     System.out.print("Enter professor's last name\n> ");
-    lName = scanner.next();
+    lName = scanner.nextLine();
     try {
       professor = (DanielProfessorPersonType)teamList.push(new DanielProfessorPersonType(fName.trim(), lName.trim()));
-      System.out.print("Enter professor's age\n> ");
-      age = scanner.next();
-      professor.setAge(Integer.parseInt(age));
-      System.out.print("Enter the class name " + fName + " is teaching. Type 'done' if done entering classes\n>");
-      String aClass = scanner.next();
-      while(!aClass.toLowerCase().equals("done")) {
-        professor.addClassTeaching(aClass);
+      if(professor != null) {
+        System.out.print("Enter professor's age\n> ");
+        age = scanner.nextLine().trim();
+        professor.setAge(Integer.parseInt(age));
         System.out.print("Enter the class name " + fName + " is teaching. Type 'done' if done entering classes\n>");
-        aClass = scanner.next();
+        String aClass = scanner.nextLine();
+        while(!aClass.toLowerCase().equals("done")) {
+          professor.addClassTeaching(aClass);
+          System.out.print("Enter the class name " + fName + " is teaching. Type 'done' if done entering classes\n>");
+          aClass = scanner.nextLine();
+        }
+        System.out.println(professor.toString());
+        System.out.print("\nPerson Added!");
       }
-      System.out.println(professor.toString());
-      System.out.print("\nPerson Added!");
+      
     } catch (DanielStackOverFlowException e) {
       System.out.println(e);
     }

@@ -1,9 +1,14 @@
 The following are the names in the team:
 
-Num: 1 - First Name: Peter - Last Name: Parker
-Num: 2 - Full Name: Student Person - Age: 0 - Major: major
-Taking: 
-Num: 3 - First Name: Steve - Last Name: Rogers
-Num: 4 - First Name: Tony - Last Name: Stark
-Num: 5 - Full Name: Professor TypePerson - Age: 0
-Teaching: 
+Num: 1 - Full Name: Frida Kahlo - Age: 40
+Teaching: Art 101, Humanities 400, Art 300, 
+Num: 2 - Full Name: Ada Lovelace - Age: 45
+Teaching: CS400, CS404, CS500, 
+Num: 3 - Full Name: Peter Parker - Age: 20 - Major: major
+Taking: Math300, Math330, Physics345, Humanities, 
+Num: 4 - Full Name: Steve Rogers - Age: 19 - Major: major
+Taking: Humanities, CS100, Math144, Physics 120, 
+Num: 5 - Full Name: Tony Stark - Age: 35
+Teaching: CS450, CS440, 
+Num: 6 - Full Name: Daniel Vega - Age: 23 - Major: major
+Taking: CS420, CS408, CS422, 
